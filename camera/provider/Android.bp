@@ -16,7 +16,7 @@ exynos9611_model {
 }
 
 cc_defaults {
-    name: "samsung_camera_service_2_5_defaults",
+    name: "samsung_camera_service_2_6_defaults",
     defaults: [
         "hidl_defaults",
         "exynos9611_model_defaults",
@@ -32,6 +32,7 @@ cc_defaults {
         "android.hardware.camera.provider@2.4-legacy",
         "android.hardware.camera.provider@2.5",
         "android.hardware.camera.provider@2.5-legacy",
+        "android.hardware.camera.provider@2.6",
         "libbinder",
         "libcamera_metadata",
         "libcutils",
@@ -46,15 +47,15 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "android.hardware.camera.provider@2.5-service.samsung",
-    defaults: ["samsung_camera_service_2_5_defaults"],
+    name: "android.hardware.camera.provider@2.6-service.samsung",
+    defaults: ["samsung_camera_service_2_6_defaults"],
     compile_multilib: "32",
-    init_rc: ["android.hardware.camera.provider@2.5-service.samsung.rc"],
+    init_rc: ["android.hardware.camera.provider@2.6-service.samsung.rc"],
 }
 
 cc_binary {
-    name: "android.hardware.camera.provider@2.5-service_64.samsung",
-    defaults: ["samsung_camera_service_2_5_defaults"],
+    name: "android.hardware.camera.provider@2.6-service_64.samsung",
+    defaults: ["samsung_camera_service_2_6_defaults"],
     compile_multilib: "64",
-    init_rc: ["android.hardware.camera.provider@2.5-service_64.samsung.rc"],
+    init_rc: ["android.hardware.camera.provider@2.6-service_64.samsung.rc"],
 }
