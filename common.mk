@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/universal9611-common
+COMMON_PATH := device/samsung/exynos9611-common
 
 # 64BIT
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
+$(call inherit-product, vendor/samsung/exynos9611-common/exynos9611-common-vendor.mk)
 
 # Debug utils
 $(call inherit-product, $(COMMON_PATH)/debug-tools/debug.mk)
@@ -47,8 +47,8 @@ PRODUCT_COPY_FILES += \
 
 # Biometric Fingerprint
 PRODUCT_PACKAGES += \
-     android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611 \
-     SamsungUdfpsHandler.universal9611
+     android.hardware.biometrics.fingerprint@2.3-service-samsung.exynos9611 \
+     SamsungUdfpsHandler.exynos9611
 
 # Bluetooth
 PRODUCT_PACKAGES += \

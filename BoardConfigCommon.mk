@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/universal9611-common
+COMMON_PATH := device/samsung/exynos9611-common
 
 ## Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 ## Inherit proprietary vendor configuartion
-include vendor/samsung/universal9611-common/BoardConfigVendor.mk
+include vendor/samsung/exynos9611-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -83,7 +83,7 @@ BOARD_CUSTOM_DTBIMG_MK := $(COMMON_PATH)/mkdtbimg.mk
 # Fingerprint
 TARGET_SEC_FP_REQUEST_FORCE_CALIBRATE := true
 # FOD
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.universal9611
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.exynos9611
 
 # Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
@@ -113,7 +113,7 @@ BOARD_ROOT_EXTRA_FOLDERS := efs
 
 ## Platform
 BOARD_VENDOR := samsung
-TARGET_BOARD_PLATFORM := universal9611
+TARGET_BOARD_PLATFORM := exynos9611
 TARGET_BOOTLOADER_BOARD_NAME := exynos9611
 TARGET_SOC := exynos9611
 
